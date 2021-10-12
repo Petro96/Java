@@ -60,7 +60,7 @@ public class Exercise{
         }
     }
 
-    public static int[] reverseArray(int[] arr){
+    public static int[] reverseArray(int[] arr){ //returning an array
         int[] result = new int[arr.length];
 
         for(int i=0,j=result.length-1;i<arr.length;i++,j--){
@@ -74,7 +74,7 @@ public class Exercise{
 
     /*
     public static void main(String args[]){
-        int[] array = {23,43,1,2,6,78};
+        int[] array = {23,43,1,2,6,78};      //use createArray method==> int[] a = createArray();
         int[] reverse;
 
         // for(int i=0;i<array.length;i++){
@@ -113,12 +113,33 @@ public class Exercise{
         printArray(array);
     }*/
 
+    // PASSING ARRAY OF CLASS //////////////////////////////////////////////////////////////////////////
+
+    // -> define array of class => create new object which you use for passing array of class !!!!!! 
+
+    /*
+    public static void main(String[] args) {
+        System.out.println("Welcome to Online IDE!! Happy Coding :)");
+
+        Main p1 = new Main("Valdo");
+        Main p2 = new Main("Janko");
+
+        Main[] array = new Main[2]; // array of class Main() // Main[] array={p1,p2}
+        
+        array[0] = new Main("Vlado"); // p1
+        array[1] = new Main("Janko"); // p2
+        
+        Main m = new Main("Array of Class."); // object for passing array of class
+        m.printNames(array);
+        */
+
     // Methods
 
     // overloading (functions same name->another return value)
     // Command line arguments args[] (passing through args from terminal )
     // this keyword - method instances,constructors
 
+    /*
     int age; // instance variable
 
     Exercise(){         // constructor that call constructor
@@ -132,6 +153,7 @@ public class Exercise{
     public void printing(){      //method
         System.out.println("Age "+this.age);
     }
+    */
     /*
     public static void main(String args[]){
         Exercise e1 = new Exercise(23);
@@ -143,12 +165,13 @@ public class Exercise{
     //variable arguments(var-args)
     // f(double... numbers)
 
+    /*
     public static void main(String args[]){
         printMax(1,2,4.5,45,7);
         printMax(new double[]{34,45.6,67,2}); //variable arguments
-    }
+    }*/
 
-    public static void printMax(double... numbers){
+    public static void printMax(double... numbers){ //var args parameters
         if(numbers.length ==0){
             System.out.println("No argument to pass.");
             //return;
@@ -163,5 +186,62 @@ public class Exercise{
         System.out.println("Max value of value arguments: "+result);
     }
 
+    //THIS KEY ------------------------------------------------------------------------
+    /*
+    int number=10;
+    Exercise(){
+        System.out.println("Hello World!Welcome to Java Methods.");
+    }
+
+    Exercise(int number){
+        this();
+        this.number = number;
+   }
+
+   public void greet(){
+       System.out.println("Welcome to Tutorial.");
+   }
+
+   public void printing(){
+       int number=20;
+
+       System.out.println("Local variable: "+number);
+
+       System.out.println("Instance variable "+this.number);
+
+       this.greet();
+   }
+
+   public static void main(String args[]){
+       Exercise obj1 = new Exercise();
+       obj1.printing();
+       Exercise obj2 = new Exercise(30);
+       obj2.printing();
+   }
+   */
+
+   
+
+  public String toString(){ //Theres a method toString(usefull for printing objects)
+      return "names";
+       }
+
+    public static void main(String[] args) {
+        String[] names = new String[3];
+        String s = "Hello";
+        
+
+        names[0] = "James";
+        names[1] = "Jane";
+        names[2] = "Mary";
+        s+="World";
+        
+
+        System.out.println(Arrays.toString(names)); //Arrays.toString(names) //Method toString
+        System.out.println(s);
+        System.out.println(names);
+   }
+
+   
 
 }
