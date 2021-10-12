@@ -1,5 +1,3 @@
-
-
 public class Practice{
 
     String name,program; //Declaration
@@ -7,12 +5,12 @@ public class Practice{
     double score;
     int howManyStudents=0;
 
-    Practice(){ //Initialization
-        System.out.println("Hello,Im Student.");
-    }
+    // Practice(){ //Initialization
+    //     System.out.println("Hello,Im Student.");
+    // }
 
     Practice(String name,int age,String program,double score){
-        this(); // only can be use in constructor
+        //this(); // only can be use in constructor
         this.name = name;
         this.age = age;
         this.program = program;
@@ -42,18 +40,28 @@ public class Practice{
             System.out.println("Student dont have Shoolarship.");
         }
     }
-    /*
-    public void highScore(Practice[] arr){
+    
+    public double highScore(Practice[] arr){
         int l = arr.length;
         double m =0;
 
         for(int i=0;i<l;i++){
-            if(this.score[i] > m){
-                m = this.score[i]; // without this (arr[i])
+            if(arr[i].score > m){
+                m = arr[i].score; // without this (arr[i])
             }
         }
         return m;
-    }*/
+    }
+
+    public void printStudents(Practice[] a){
+        
+        for(int i=0;i<a.length;i++){
+            a[i].printingInfo();
+            a[i].schoolarship();
+            a[i].dorm();
+            System.out.println("\n");
+        }
+    }
 
     // PASSING ARRAY OF CLASS //////////////////////////////////////////////////////////////////////////
 
@@ -80,18 +88,22 @@ public class Practice{
         //Practice s1 = new Practice("John",21,"IT",8.50); //instantiation
         //Practice s2 = new Practice("Leo",23,"IT",9.00);
 
-        Practice[] array = new Practice[5]; //create array of objects
+        Practice[] array = new Practice[3]; //create array of objects
         array[0] = new Practice("John",21,"IT",8.50);
         array[1] = new Practice("Leo",23,"IT",9.00);
-
-        array[0].printingInfo();
-        array[0].schoolarship();
-        array[0].dorm();
+        array[2] = new Practice("Mary",24,"Web Development",9.50);
 
         // Passing array of class
 
-        //Practice p = new Practice("name",21,"program",45.6);
-        //p.highScore(array);
+        Practice p = new Practice("name",21,"program",45.6);
+        System.out.println("Students highes score :"+p.highScore(array));
+
+        // array[0].printingInfo();   
+        // array[0].schoolarship();
+        // array[0].dorm();
+        System.out.println("The List of Students:");
+        Practice s = new Practice("name",23,"student_prog",56.7);
+        s.printStudents(array);
         
         
     }

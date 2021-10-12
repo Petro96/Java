@@ -220,8 +220,8 @@ public class Exercise{
    }
    */
 
-   
-
+  // toString
+  /*
   public String toString(){ //Theres a method toString(usefull for printing objects)
       return "names";
        }
@@ -240,8 +240,25 @@ public class Exercise{
         System.out.println(Arrays.toString(names)); //Arrays.toString(names) //Method toString
         System.out.println(s);
         System.out.println(names);
+   }*/
+
+   //////// OVERRIDING 
+   
+   // two classes : Animal public class Animals-->speak("Animals") / Dog public class Dog extends Animals --speak("Bark")@Ovrride
+   /*
+   public static void main(String[] args){
+
+     Dog dog = new Dog(); // calling dog
+     Animals animal = new Animals();
+
+     dog.speak();
+     animals.speak();
+
+
    }
 
-   
+   */
+
+
 
 }
