@@ -3,7 +3,77 @@ import java.lang.Character;
 import java.util.Arrays;
 import java.util.Scanner;
 
+//Declaration Nested class ->> PRIVATE
+
+class OuterDemo{ // nested class -->> private 
+
+    int num;
+
+    private class InnerDemo{ //innner class definition
+        public void print(){  // inner method
+            System.out.println("This is a Inner Class Demo.");
+        }
+    }
+ 
+    void displayInner(){ // create,acessing inner class
+     InnerDemo inner = new InnerDemo();
+     inner.print();
+    }
+}
+
+// Accessing  private members
+
+class Outer_Demo{ // nested class -->> Inner => public // you can extend Outer_Demo from Exercise class
+
+    private int num=11; // private member
+
+    public class Inner_Demo{ //innner class definition
+        public int getNumber(){  // inner method
+            System.out.println("This is a getNumber method from inner class");
+            return num;
+            }
+        } 
+    }   
+
+// Anonymous Inner Class - abstract
+
+abstract class AnonymousInner{
+    public abstract void Method();
+}
+
+//Anonymous class as an argument
+interface Message{
+    String greet(); //define method
+}
+
+
+// METHOD-LOCAL INNER CLASS TYPE
+
 public class Exercise{
+
+    // Method-local inner classs
+
+    public void Method(){ //instance method
+        int n = 14;
+    
+
+        class MethodInnerClass{
+            public void p(){
+                System.out.println("Method inner class variable: "+n);
+            }
+        }
+
+        MethodInnerClass i = new MethodInnerClass();
+        i.p();
+    }
+    /*
+    public static void main(String[] args){
+        Exercise o = new Exercise();
+        o.Method();
+    }*/
+
+
+
 
     // EXERCISEs
 
@@ -259,6 +329,48 @@ public class Exercise{
 
    */
 
+   //  ------------------ NESTED CLASSES 
 
+   /*
+   public static void main(String[] args){
+       OuterDemo outer = new OuterDemo();
 
+       outer.displayInner();
+   }*/
+
+   // ACCESSING PRIVATE MEMBERS of inner class
+   /*
+   public static void main(String[] args){
+
+    Outer_Demo outer = new Outer_Demo(); // outer class access
+
+    Outer_Demo.Inner_Demo inner = outer.new Inner_Demo();
+    System.out.println(inner.getNumber());
+   }
+   */
+
+   //Anonymouse Inner
+   /*
+   public static void main(String[] args){
+        AnonymousInner a = new AnonymousInner(){
+            public void Method(){
+                System.out.println("This is Anonymous Inner class example");
+            }
+        };
+        a.Method();
+   }*/
+
+   //Anonymous class as argument
+   public void displayMessage(Message m){
+       System.out.println(m.greet()+" This is exmaple of anonymous class as argument.");
+   }
+
+   public static void main(String[] args){
+       Exercise obj = new Exercise();
+       obj.displayMessage(new Message() { //createing object inside method as argument
+           public String greet(){
+               return "Hello";
+           }
+       });
+   }
 }
