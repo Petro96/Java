@@ -41,15 +41,19 @@ abstract class AnonymousInner{
     public abstract void Method();
 }
 
-//Anonymous class as an argument
+//Anonymous class as an argument(interface)
 interface Message{
     String greet(); //define method
 }
 
+//anonymous class as argument example
+interface First{
+    void input();
+    void add();
+}
 
-// METHOD-LOCAL INNER CLASS TYPE
 
-public class Exercise{
+public class Exercise implements First{ //implemets -> for inteface usage!
 
     // Method-local inner classs
 
@@ -66,6 +70,7 @@ public class Exercise{
         MethodInnerClass i = new MethodInnerClass();
         i.p();
     }
+
     /*
     public static void main(String[] args){
         Exercise o = new Exercise();
@@ -233,6 +238,7 @@ public class Exercise{
     }*/
 
     //variable arguments(var-args)
+
     // f(double... numbers)
 
     /*
@@ -329,7 +335,7 @@ public class Exercise{
 
    */
 
-   //  ------------------ NESTED CLASSES 
+   //  ------------------ NESTED CLASSES -------------------------------------------------------
 
    /*
    public static void main(String[] args){
@@ -344,7 +350,7 @@ public class Exercise{
 
     Outer_Demo outer = new Outer_Demo(); // outer class access
 
-    Outer_Demo.Inner_Demo inner = outer.new Inner_Demo();
+    Outer_Demo.Inner_Demo inner = outer.new Inner_Demo(); 
     System.out.println(inner.getNumber());
    }
    */
@@ -361,6 +367,7 @@ public class Exercise{
    }*/
 
    //Anonymous class as argument
+   /*
    public void displayMessage(Message m){
        System.out.println(m.greet()+" This is exmaple of anonymous class as argument.");
    }
@@ -372,5 +379,62 @@ public class Exercise{
                return "Hello";
            }
        });
+   }*/
+
+   // Static Nested Class
+
+   /*
+   static class Inner{
+       int a=5;
+       int b=7;
+       public void method(){
+           System.out.println("Static Class!");
+       }
+       public int addition(){
+           int result = a + b;
+           return result;
+       }
    }
+
+   public static void main(String[] args){
+       Exercise.Inner s = new Exercise.Inner();
+       s.method();
+       System.out.println("Add two numbers from static class: "+s.addition());
+   }*/
+
+   // Example with nested Anonymous Interface class
+
+   /*
+   int x,y,z;
+   Scanner sc = new Scanner(System.in );
+
+   public void input(){
+       System.out.println("Enter the two numbers: ");
+       x = sc.nextInt();
+       y = sc.nextInt(); 
+   }
+
+   public void add(){
+       z = x + y;
+   }
+
+   public void display(){
+       System.out.println("Sum of tw numbers "+x+"+"+y+"="+z);
+   }
+
+   public static void main(String[] args) {
+       Exercise obj = new Exercise();
+       obj.input();
+       obj.add();
+       obj.display();
+   }*/
+
+   
+   
+
+
+
+
+
+
 }
