@@ -225,10 +225,25 @@ public class OOP extends Calculation{
          
      }*/
 
-     //Inteface 
+     // --------------------------------------Inteface -----------------------------------------------------------
      // - solve probelm with Inheritance -> can impleents more than one ...
      // - define methods outide of inteface
      // - if i want to have public inteface needs to be define in separate file !!!!!
+
+     // -------------------------------------Static keyword ------------------------------------------------------------
+     // static variable - changes inside class
+     // can not iteract with non static 
+     // method : static void friends(); className.friends()  like : Math.round(number):
+
+     // ------------------------------------------ Abstract Class -------------------------------------------------------
+     // process of hiding implementation details from user (what object does instead how it does !!!! ) 
+     // abstract class can not be instantiated(created)
+     // abstract method,classes are define without body, child class must implement that method !!!
+     // Abstract class = abstract method
+
+     
+     
+     
 
      
 
