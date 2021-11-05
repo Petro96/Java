@@ -1,0 +1,16 @@
+
+  JAVA Real-projects 
+
+
+
+
+1. Airline reservation system (automation,ticket,payment,schedule,calling company)
+2. Course managment system (Student-teachers,administration,student module,instructions)
+3. Data visualization software
+4. Electricity billing system
+5. E-health care managment system(Admin-client,pharmacy)
+6. Email client software
+7. Library managment system
+8. Online bank managment system
+9. Online medical system
+

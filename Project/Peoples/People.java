@@ -1,4 +1,4 @@
-public abstract class People { //can be abstract class People --> abs methods can not be define
+public abstract class People { //can be abstract class People --> abs methods can not be initated
 
     private String name;
     private String lastName;

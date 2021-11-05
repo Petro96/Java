@@ -1,4 +1,4 @@
-public class Employee extends People implements Information {
+public class Employee extends People implements Information,payment {
 
     private String position;
     private int salary;
@@ -10,21 +10,6 @@ public class Employee extends People implements Information {
         this.position = position;
         numberOfEmployees++;
     }
-
-    // @Override
-    // public void setSalary(int newSalary){
-    //     this.salary = newSalary;
-    // }
-
-    // @Override
-    // public int getSalary(){
-    //     return this.salary;
-    // }
-
-        // public double setRaise(double newRaise){
-        //     this.raise = newRaise;
-        // }
-
 
     public String getPosition(){
         return this.position;
@@ -46,14 +31,35 @@ public class Employee extends People implements Information {
         return super.getAge();
     }
 
-    // @Override
-    // public double getRaise(){
-    //     return this.salary * this.raise;
-    // }
 
     @Override
     public void getInfo(){
         System.out.println("Name: " +getName()+"\n"+"Last Name: "+getLastName()+"\n"+"Age: "+getAge()+"\n"+"Email: "+getEmail()+"\n"+"Job position: "+this.position);
+    }
+
+    @Override
+    public void setSalary(int newSalary){
+        this.salary = newSalary;
+    }
+
+    @Override
+    public int getSalary(){
+        return this.salary;
+    }
+    
+    @Override
+    public void setRaise(double newRaise){
+        this.raise = newRaise;
+    }
+
+    @Override
+    public double getRaise(){
+        return this.raise;
+    }
+
+    @Override
+    public double afterRaise(){
+        return this.salary * this.raise;
     }
     
 }

@@ -106,11 +106,14 @@ public class OOP extends Calculation{
 
     }*/
         // --------------------------------------- FINAL ------------------------------------
-        // final variable,method,class
+        // final variable,method,class -> can not override
         // variable: can not override,inheritance,change
         // method : can not overriding
         // class : can not extend
         // ----------------------------------------- PACKAGE ---------------------------------
+        // useage : for organize classes and intefaces
+        // types: built-in 
+        //        user-defined 
         //packages : javac -d(where to put generated class file(javac -d.filename.java->in the same directory)) main.java ---> compile from terminal
         //similar types of classes
         //interfaces
@@ -226,6 +229,8 @@ public class OOP extends Calculation{
      }*/
 
      // --------------------------------------Inteface -----------------------------------------------------------
+     // types: methods, static methods , nested type
+     // Interface can extends more interfaces 
      // - solve probelm with Inheritance -> can impleents more than one ...
      // - define methods outide of inteface
      // - if i want to have public inteface needs to be define in separate file !!!!!
@@ -234,6 +239,8 @@ public class OOP extends Calculation{
      // static variable - changes inside class
      // can not iteract with non static 
      // method : static void friends(); className.friends()  like : Math.round(number):
+     // A class can be made static only if it is a NESTED class.
+     // static block --> static{int num,String name};
 
      // ------------------------------------------ Abstract Class -------------------------------------------------------
      // process of hiding implementation details from user (what object does instead how it does !!!! ) 
@@ -241,11 +248,65 @@ public class OOP extends Calculation{
      // abstract method,classes are define without body, child class must implement that method !!!
      // Abstract class = abstract method
 
-     
-     
-     
+     // -------------------------------------------- Encapsulation --------------------------------------------------------
+     //wrapping the data (variables) and code acting on the data (methods) together as a single unit
+     // declaration: private / access : getters,setters
+     //benefits : class can be made read-write only 
 
-     
+     //----------Association
+     // established relationship between two separated classes through their objects.
+     /*
+     public static void main(String[]  args){     // example of association 
+         OOP obj = new OOP("Mars");
+         System.out.println("Association--> number from extends classs "+obj.number);
+     }
+     */
+
+     //----------Aggregation
+     // HAS - A relationship
+     // as method argument we use object type !!!
+     // one class depend on another : human needs heart and heart needs human body
+
+     // -------------------------------------------------------- 2D Array ------------------------------------------------
+     // in 1D array ->> Arrays.toString(array); , in 2D array ->>> Arrays.DeepToString(array);
+     /*
+    public static void main(String[] args){
+
+        char[][] ticTacToe = {{'X','O','X'},{'X','O',' '},{'X',' ','X'}};
+        
+        System.out.println("Array "+Arrays.deepToString(ticTacToe)); // deepToString()
+        
+        for(int i=0;i<ticTacToe.length;i++){
+            //System.out.println();
+            for(int j=0;j<ticTacToe[i].length;j++){
+
+                System.out.print(ticTacToe[i][j]+" "); // print --> in the same line!
+
+                if(ticTacToe[i][j]=='X'){
+                  //System.out.println(ticTacToe[i][j]+"\n");
+                    ticTacToe[i][j] = 'O';
+                }
+                else if(ticTacToe[i][j]=='O'){
+                    ticTacToe[i][j]='X';
+                }
+
+            }
+            
+            System.out.println(); // println ->> print in column
+          }
+
+        System.out.println("Changed array "+Arrays.deepToString(ticTacToe));
+    }
+
+    */
+
+    // ---------------------------------------------------- Finalize method ------------------------------
+    // unreference objects(System.gc)
+    // 3 ways : nulling
+    //          assining to another objects
+    //          anonymous objects(  new Object() ==> Anonymos object ) 
+    // protected finalize method before garbage collection --- > object=null ---> System.gc
+    // 
 
 
 
