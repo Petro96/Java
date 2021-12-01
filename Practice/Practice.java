@@ -102,6 +102,7 @@ public class Practice{
         // array[0].schoolarship();
         // array[0].dorm();
         System.out.println("The List of Students:");
+        
         Practice s = new Practice("name",23,"student_prog",56.7);
         s.printStudents(array);
         

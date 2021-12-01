@@ -1,0 +1,18 @@
+///////////////////////////// Exercises 
+
+
+
+1 . write a program to find maximum length word and minimum length word from given sentence !
+
+input: Java is a programming langugae
+
+output:  max: programming
+         min: a
+
+input: aaa bb ccc
+
+output:   max:aaa , ccc
+
+          min: bb
+
+

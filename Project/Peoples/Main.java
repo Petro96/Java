@@ -5,6 +5,14 @@ public class Main{
 
     public static void main(String[] args){
 
+        // PeopleObjects obj = new PeopleObjects();
+        // obj.students[0].getInfo();
+        
+
+        
+        
+        
+
         //People p1 = new People("Janko","Petras",23); // its abstract class, can not create objects!!!!! 
         //System.out.println(p1.getEmail());
         // System.out.println(p1.name="Pavel"); //Its not gonna change email automaticlly
@@ -12,7 +20,7 @@ public class Main{
         // System.out.println(p1.getEmail());
 
         //Students
-
+        /*
         Student s1 = new Student("Leo","Monther",23,"FEI STU BA",7.50); //People s1 = new Student(...)
 
         System.out.println(s1.getName());
@@ -26,7 +34,7 @@ public class Main{
         //s1.setScholarship(1000);
         System.out.println("New Scholarship: "+s1.getScholarship());
         s1.dorm();
-        
+        */
         //static method() : static variable -->> call class.static_method()
         System.out.println("-----------------------------------------------");
         //Teachers
