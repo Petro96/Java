@@ -8,8 +8,13 @@ public class main{
 
         ArrayExercise a = new ArrayExercise();
         int[] arr = new int[5];
+        int[] frArray = new int[arr.length];
+        
 
         arr = a.createArray(5);
+        frArray = a.frequencyOfElements(arr);
+
+        
 
         System.out.println("Array: "+Arrays.toString(arr));
 
@@ -24,8 +29,24 @@ public class main{
         a.printArrayElements(arr);
 
         System.out.println("Copied Array: "+Arrays.toString(a.CopyArray(arr)));
+
+        a.printFrequencyOfElements(arr, frArray); // freq Array    
+
+        //printarray
+        //rotate
+        //print rotate array
+        System.out.println("Not rotated!");
+        a.printArrayElements(arr);
+        printArray.printDuplicate(arr);  // duplicates !! 
+        //operations.rotateLeft(arr, 1);
+        //operations.rotateRight(arr, 1);
+        System.out.println("Rotated!");
+        a.printArrayElements(arr);
         
-        
+
+
+
+
         //Arrays.sort(array)
         //Arrays.equals(arr1,arr2);
         //Arrays.deepEquals()
